@@ -1,0 +1,42 @@
+.similar-job-items-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  background-color: #272727;
+  background-size: cover;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 20px;
+  font-family: 'Roboto';
+  color: #fff;
+  width: 100%;
+  margin: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .similar-job-items-container {
+    width: 40%;
+  }
+}
+
+.similar-job-desc-heading {
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.similar-job-description {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.similar-job-location-type-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.similar-job-location-margin {
+  margin-left: 30px;
+}

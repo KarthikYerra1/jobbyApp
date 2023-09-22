@@ -1,0 +1,164 @@
+.specific-job-container {
+  background-color: #000000;
+  min-height: 100vh;
+  background-size: cover;
+  padding: 20px;
+}
+
+.specific-job-details-container {
+  background-color: #272727;
+  background-size: cover;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.margin-style {
+  margin: auto;
+}
+
+.description-link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Roboto';
+}
+
+.specific-job-item-description-heading {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .specific-job-item-description-heading {
+    font-size: 30px;
+  }
+}
+
+.specific-job-company-link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  color: #6366f1;
+  margin-right: 30px;
+}
+
+.skills-heading {
+  margin-top: 20px;
+  font-size: 25px;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .skills-heading {
+    font-size: 30px;
+  }
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0;
+}
+
+.skill-container {
+  list-style-type: none;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  align-items: center;
+  font-family: 'Roboto';
+}
+
+@media screen and (min-width: 768px) {
+  .skill-container {
+    width: 25%;
+  }
+}
+
+.skill-icon {
+  height: 50px;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .skill-icon {
+    height: 70px;
+  }
+}
+
+.skill-name {
+  font-size: 20px;
+}
+
+.life-at-company-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .life-at-company-container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.life-at-company-description-container {
+  width: 100%;
+  font-family: 'Roboto';
+}
+
+@media screen and (min-width: 768px) {
+  .life-at-company-description-container {
+    width: 65%;
+  }
+}
+
+.life-at-company-heading {
+  font-size: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .life-at-company-heading {
+    font-size: 34px;
+  }
+}
+
+.life-at-company-description {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.life-at-company-image {
+  height: 300px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .life-at-company-image {
+    height: 250px;
+    width: 35%;
+  }
+}
+
+.similar-jobs-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0;
+}
+
+.similar-jobs-list-heading {
+  font-family: 'Roboto';
+  font-size: 30px;
+  color: #fff;
+  margin-left: 20px;
+}

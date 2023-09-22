@@ -1,0 +1,134 @@
+.job-link {
+  text-decoration: none;
+}
+
+.job-card-container {
+  color: #fff;
+  list-style-type: none;
+  background-color: #272727;
+  background-size: cover;
+  padding: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Roboto';
+  width: 90%;
+  margin: 15px 15px 15px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .job-card-container {
+    padding: 30px;
+    width: 100%;
+  }
+}
+
+.title-logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.job-company-logo {
+  height: 80px;
+  margin-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .job-company-logo {
+    height: 100px;
+  }
+}
+
+.title-rating-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-title {
+  font-size: 22px;
+  padding: 0px;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .job-title {
+    font-size: 26px;
+  }
+}
+
+.rating-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.star-icon {
+  font-size: 22px;
+  margin-right: 5px;
+  color: #fbbf24;
+}
+
+.job-rating {
+  font-size: 20px;
+}
+
+.location-package-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location-type-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .location-type-container {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .location-type-container {
+    width: 23%;
+  }
+}
+
+.location-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.job-icons {
+  font-size: 22px;
+  margin-right: 5px;
+}
+
+.job-location {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .job-location {
+    font-size: 20px;
+  }
+}
+
+.job-description {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .job-description {
+    font-size: 22px;
+  }
+}
