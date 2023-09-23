@@ -1,9 +1,8 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
-
-import {BsSearch} from 'react-icons/bs'
 import FiltersGroup from '../FiltersGroup'
+import SearchContainer from '../SearchContainer'
 import Header from '../Header'
 import JobCard from '../JobCard'
 
@@ -102,28 +101,42 @@ class Jobs extends Component {
     }
   }
 
+  //   onEnterSearchInput = () => {
+  //     const {searchInputText} = this.state
+  //     this.setState({searchInput: searchInputText}, this.getAllJobs)
+  //   }
+
+  //   enterSearchInput = event => {
+  //     const {searchInputText} = this.state
+  //     if (event.key === 'Enter') {
+  //       this.setState({searchInput: searchInputText}, this.getAllJobs)
+  //     }
+  //   }
+
+  //   onChangeSearchInput = event => {
+  //     this.setState({searchInputText: event.target.value})
+  //   }
+
+  // changeSearchInput = value => {
+  //     this.setState({searchInputText: value})
+  //   }
+
+  onChangeSearchInput = searchInputText => {
+    this.setState({searchInputText})
+  }
+
   onEnterSearchInput = () => {
     const {searchInputText} = this.state
     this.setState({searchInput: searchInputText}, this.getAllJobs)
   }
 
-  enterSearchInput = event => {
+  searchJobs = () => {
     const {searchInputText} = this.state
-    if (event.key === 'Enter') {
-      this.setState({searchInput: searchInputText}, this.getAllJobs)
-    }
-  }
-
-  onChangeSearchInput = event => {
-    this.setState({searchInputText: event.target.value})
+    this.setState({searchInput: searchInputText}, this.getAllJobs)
   }
 
   changeEmploymentType = value => {
     this.setState({employmentType: value}, this.getAllJobs)
-  }
-
-  changeSearchInput = value => {
-    this.setState({searchInputText: value})
   }
 
   changeSalaryRange = value => {
@@ -218,18 +231,27 @@ class Jobs extends Component {
       <>
         <Header />
         <div className="jobs-bg-container">
-          <FiltersGroup
-            searchInputText={searchInputText}
-            employmentTypesList={employmentTypesList}
-            salaryRangesList={salaryRangesList}
-            changeSearchInput={this.changeSearchInput}
-            enterSearchInput={this.enterSearchInput}
-            changeEmploymentType={this.changeEmploymentType}
-            changeSalaryRange={this.changeSalaryRange}
-            employmentType={employmentType}
-          />
+          <div>
+            <SearchContainer
+              searchInputText={searchInputText}
+              onChangeSearchInput={this.onChangeSearchInput}
+              onEnterSearchInput={this.onEnterSearchInput}
+              searchJobs={this.searchJobs}
+              className="sm-device-search"
+            />
+            <FiltersGroup
+              searchInputText={searchInputText}
+              employmentTypesList={employmentTypesList}
+              salaryRangesList={salaryRangesList}
+              changeSearchInput={this.changeSearchInput}
+              enterSearchInput={this.enterSearchInput}
+              changeEmploymentType={this.changeEmploymentType}
+              changeSalaryRange={this.changeSalaryRange}
+              employmentType={employmentType}
+            />
+          </div>
           <div className="jobs-container">
-            <div className="input-container input-lg">
+            {/* <div className="input-container input-lg">
               <input
                 value={searchInputText}
                 placeholder="Search"
@@ -246,7 +268,14 @@ class Jobs extends Component {
               >
                 <BsSearch className="search-icon" />
               </button>
-            </div>
+            </div> */}
+            <SearchContainer
+              searchInputText={searchInputText}
+              onChangeSearchInput={this.onChangeSearchInput}
+              onEnterSearchInput={this.onEnterSearchInput}
+              searchJobs={this.searchJobs}
+              className="lg-device-search"
+            />
             {this.renderAllJobs()}
           </div>
         </div>

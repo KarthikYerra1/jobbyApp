@@ -1,42 +1,8 @@
-import {BsSearch} from 'react-icons/bs'
 import ProfileCard from '../ProfileCard'
 
 import './index.css'
 
 const FiltersGroup = props => {
-  const renderSearchBar = () => {
-    const {searchInputText, changeSearchInput, enterSearchInput} = props
-
-    const onChangeSearchInput = event => {
-      changeSearchInput(event.target.value)
-    }
-
-    const onEnterSearchInput = event => {
-      enterSearchInput(event)
-    }
-
-    return (
-      <div className="input-container input-sm">
-        <input
-          className="input-bar"
-          type="search"
-          value={searchInputText}
-          placeholder="Search"
-          onChange={onChangeSearchInput}
-          onKeyDown={onEnterSearchInput}
-        />
-        <button
-          className="search-btn sm-search-btn"
-          type="button"
-          onClick={onEnterSearchInput}
-          data-testid="searchButton"
-        >
-          <BsSearch className="search-icon-sm" />
-        </button>
-      </div>
-    )
-  }
-
   const renderEmploymentTypes = () => {
     const {employmentTypesList, changeEmploymentType, employmentType} = props
 
@@ -109,7 +75,7 @@ const FiltersGroup = props => {
 
   return (
     <div className="filters-group-container">
-      {renderSearchBar()}
+      {/* {renderSearchBar()} */}
       <ProfileCard />
       <hr className="horizontal-line" />
       {renderEmploymentTypes()}
